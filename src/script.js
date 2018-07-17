@@ -68,6 +68,9 @@ ready(function() {
 
   // render scene
   const render = () => {
+    earth.rotation.y += 0.02;
+    moon.rotation.y += 0.02;
+    sun.rotation.y += 0.001;
     renderer.render(scene, camera);
   };
   renderer.setAnimationLoop(render);
