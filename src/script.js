@@ -35,7 +35,7 @@ ready(function() {
   scene.add(light);
 
   // Add camera
-  const camera = new THREE.PerspectiveCamera(40, windowWidth / windowHeight, 0.1, 500);
+  const camera = new THREE.PerspectiveCamera(45, windowWidth / windowHeight, 1, 1000);
   camera.position.set(0, 0, 60);
 
   // Update dimensions on resize
@@ -58,6 +58,8 @@ ready(function() {
   const sun = new THREE.Mesh(sunGeometry, sunMaterial);
   moon.translateY(10);
   moon.translateX(15);
+  earth.translateY(5);
+  earth.translateX(2);
   sun.translateY(-30);
   sun.translateX(-30);
   scene.add(earth);
